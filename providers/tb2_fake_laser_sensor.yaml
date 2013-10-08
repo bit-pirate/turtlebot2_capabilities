@@ -1,0 +1,11 @@
+%YAML 1.1
+---
+name: tb2_fake_laser_sensor
+spec_version: 1
+spec_type: provider
+description: 'Implements the standard LaserSensor capability for the TurtleBot2 by providing a fake laser scan from the Kinect.'
+implements: std_capabilities/LaserSensor
+launch_file: 'launch/tb2_fake_laser_sensor.launch'
+depends_on:
+    'std_capabilities/RGBDSensor':
+        provider: 'turtlebot2_capabilities/tb2_kinect_rgbd_sensor'

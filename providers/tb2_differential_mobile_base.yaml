@@ -1,0 +1,11 @@
+%YAML 1.1
+---
+name: tb2_differential_mobile_base
+spec_version: 1
+spec_type: provider
+description: 'Implements DifferentialMobileBase capability on the TurtleBot2.'
+implements: std_capabilities/DifferentialMobileBase
+launch_file: 'launch/tb2_differential_mobile_base.launch'
+depends_on:
+    'turtlebot2_capabilities/TB2Bringup':
+        provider: 'turtlebot2_capabilities/tb2_bringup'

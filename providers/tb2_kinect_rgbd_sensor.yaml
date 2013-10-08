@@ -1,0 +1,12 @@
+%YAML 1.1
+---
+name: tb2_kinect_rgbd_sensor
+spec_version: 1
+spec_type: provider
+description: 'Implements the standard RGBDSensor capability using the Kinect on the TurtleBot2.'
+implements: std_capabilities/RGBDSensor
+launch_file: 'launch/tb2_kinect_rgbd_sensor.launch'
+depends_on:
+    'turtlebot2_capabilities/TB2Bringup':
+        # This is requried for a proper TF tree
+        provider: 'turtlebot2_capabilities/tb2_bringup'
