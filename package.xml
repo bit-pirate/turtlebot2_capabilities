@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <package>
   <name>turtlebot2_capabilities</name>
-  <version>0.0.0</version>
+  <version>0.1.0</version>
   <description>The turtlebot2_capabilities package</description>
 
   <maintainer email="william@osrfoundation.org">William Woodall</maintainer>
+  <maintainer email="marcus.liebhardt@yujinrobot.com">Marcus Liebhardt</maintainer>
 
   <license>BSD</license>
 
@@ -13,28 +14,38 @@
   <url type="bugtracker">https://github.com/osrf/turtlebot2_capabilities/issues</url>
 
   <author email="william@osrfoundation.org">William Woodall</author>
+  <author email="marcus.liebhardt@yujinrobot.com">Marcus Liebhardt</author>
 
   <buildtool_depend>catkin</buildtool_depend>
 
   <run_depend>capabilities</run_depend>
   <run_depend>std_capabilities</run_depend>
+  <run_depend>turtlebot_bringup</run_depend>
 
   <export>
     <capability_interface>
-      interfaces/TB2Bringup.yaml
+      interfaces/TurtleBotBringup.yaml
     </capability_interface>
+<!--     <capability_provider> -->
+<!--       providers/tb2_differential_mobile_base.yaml -->
+<!--     </capability_provider> -->
     <capability_provider>
-      providers/tb2_bringup.yaml
+      providers/depthimage_to_laserscan.yaml
     </capability_provider>
     <capability_provider>
-      providers/tb2_differential_mobile_base.yaml
+      providers/diagnostics.yaml
     </capability_provider>
     <capability_provider>
-      providers/tb2_fake_laser_sensor.yaml
+      providers/kinect_rgbd_sensor.yaml
     </capability_provider>
     <capability_provider>
-      providers/tb2_kinect_rgbd_sensor.yaml
+      providers/robot_state_publisher.yaml
     </capability_provider>
-
+    <capability_provider>
+      providers/tb_bringup.yaml
+    </capability_provider>
+    <capability_provider>
+      providers/xtion_rgbd_sensor.yaml
+    </capability_provider>
   </export>
 </package>
