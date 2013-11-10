@@ -1,7 +1,0 @@
-%YAML 1.1
----
-name: tb2_bringup
-spec_version: 1
-spec_type: provider
-implements: turtlebot2_capabilities/TB2Bringup
-launch_file: 'launch/tb2_bringup.launch'
